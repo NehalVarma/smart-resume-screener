@@ -349,7 +349,36 @@ SCORING CRITERIA (1-10):
 - 1-2: Poor fit
 ```
 
-## 🎬 Demo
+## 🎬 Demo Video
+
+### 📺 Watch the Complete Demonstration
+
+> 2-3 minute walkthrough of the Smart Resume Screener in action
+
+<!-- 
+🎥 TO ADD YOUR VIDEO:
+1. Go to GitHub: https://github.com/NehalVarma/smart-resume-screener
+2. Click on README.md and then the ✏️ Edit button
+3. Come to this section
+4. DRAG AND DROP your video file (.mp4) here in the editor
+5. GitHub will upload it and generate a URL like: https://github.com/user-attachments/assets/[id]/video.mp4
+6. The video will play directly in the README!
+-->
+
+**What you'll see in the demo:**
+- ✅ **Resume Upload**: Uploading multiple resumes (PDF/TXT format)
+- ✅ **AI Parsing**: Real-time data extraction using LLM
+- ✅ **Job Matching**: Semantic analysis comparing candidates with job requirements  
+- ✅ **Results Display**: Match scores (1-10), detailed justifications, and key insights
+- ✅ **Code Walkthrough**: Architecture overview and implementation
+
+**Demo Highlights:**
+- 📊 Intelligent scoring system with transparent justifications
+- 🎯 Semantic matching beyond simple keyword search
+- 💡 AI-powered skill extraction and analysis
+- 🚀 Complete full-stack application workflow
+
+---
 
 ### Video Demo Recording Guide
 
