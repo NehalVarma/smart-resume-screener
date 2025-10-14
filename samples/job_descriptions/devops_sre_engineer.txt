@@ -1,0 +1,107 @@
+# DevOps Engineer / Site Reliability Engineer
+
+## Company: CloudScale Technologies
+
+### Position Overview
+
+CloudScale Technologies is seeking an experienced **DevOps Engineer** to build and maintain our cloud infrastructure. You'll work on automation, CI/CD pipelines, and ensuring high availability of our services.
+
+### Key Responsibilities
+
+- Design, implement, and manage cloud infrastructure on AWS
+- Build and maintain CI/CD pipelines for automated deployments
+- Manage Kubernetes clusters and containerized applications
+- Implement infrastructure as code using Terraform or CloudFormation
+- Monitor system performance and respond to incidents
+- Implement security best practices and compliance requirements
+- Automate operational tasks and workflows
+- Collaborate with development teams on deployment strategies
+- Manage databases, networking, and security configurations
+- Document infrastructure architecture and procedures
+
+### Required Qualifications
+
+- **5+ years of DevOps or systems administration experience**
+- Strong experience with **AWS** (EC2, S3, RDS, Lambda, VPC, IAM)
+- Proficiency with **Kubernetes** and container orchestration
+- Experience with **Docker** and containerization
+- Hands-on experience with **Terraform** or other IaC tools
+- Strong knowledge of **CI/CD** tools (Jenkins, GitLab CI, GitHub Actions)
+- Proficiency in scripting languages (Bash, Python, or Go)
+- Experience with monitoring tools (Prometheus, Grafana, CloudWatch)
+- Understanding of networking concepts (DNS, Load Balancers, VPN)
+- Experience with Linux system administration
+- Strong troubleshooting and problem-solving skills
+
+### Preferred Skills
+
+- AWS certifications (Solutions Architect, DevOps Engineer)
+- Experience with multiple cloud providers (Azure, GCP)
+- Knowledge of configuration management (Ansible, Chef, Puppet)
+- Experience with service mesh (Istio, Linkerd)
+- Familiarity with GitOps workflows (ArgoCD, Flux)
+- Experience with Helm charts
+- Knowledge of security tools (Vault, AWS Secrets Manager)
+- Experience with logging solutions (ELK Stack, Splunk)
+- Understanding of database administration (PostgreSQL, MySQL)
+- Experience with incident management and on-call rotation
+- Certified Kubernetes Administrator (CKA) certification
+
+### Technical Stack
+
+- Cloud: AWS (primary), Azure, GCP
+- Containers: Docker, Kubernetes, ECS, EKS
+- IaC: Terraform, CloudFormation, Ansible
+- CI/CD: Jenkins, GitLab CI, GitHub Actions, ArgoCD
+- Monitoring: Prometheus, Grafana, Datadog, New Relic
+- Logging: ELK Stack, CloudWatch Logs
+- Scripting: Python, Bash, Go
+- Version Control: Git, GitHub
+
+### What Makes You Successful
+
+- Strong automation mindset
+- Excellent communication skills
+- Ability to work in fast-paced environment
+- Passion for learning new technologies
+- Experience with agile methodologies
+- Strong documentation skills
+- Collaborative team player
+- Problem-solving oriented
+
+### Responsibilities & Impact
+
+- Ensure 99.9% uptime for production services
+- Reduce deployment time through automation
+- Improve system reliability and performance
+- Implement cost optimization strategies
+- Maintain security and compliance standards
+- Lead infrastructure projects from design to implementation
+
+### What We Offer
+
+- Competitive salary: $145,000 - $185,000
+- Comprehensive benefits package
+- Stock options
+- Professional development opportunities
+- Work-life balance with flexible hours
+- Remote work options
+- Latest tools and technologies
+- Collaborative team environment
+- Career growth opportunities
+
+### Work Environment
+
+- Hybrid work model (2-3 days in office)
+- Modern office with ergonomic setup
+- Regular team events and activities
+- Learning budget for courses and certifications
+- Access to latest cloud technologies
+
+**Location:** Seattle, WA  
+**Experience Level:** Senior  
+**Employment Type:** Full-time
+
+**To Apply:** Send your resume to devops-jobs@cloudscaletech.com
+
+We are an equal opportunity employer and value diversity at our company.

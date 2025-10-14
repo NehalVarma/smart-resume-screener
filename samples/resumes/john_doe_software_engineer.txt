@@ -1,0 +1,71 @@
+JOHN DOE
+Software Engineer
+Email: john.doe@email.com | Phone: (555) 123-4567 | Location: San Francisco, CA
+LinkedIn: linkedin.com/in/johndoe | GitHub: github.com/johndoe
+
+PROFESSIONAL SUMMARY
+Experienced Full Stack Software Engineer with 5+ years of expertise in building scalable web applications. Proficient in Python, JavaScript, React, and cloud technologies. Strong background in microservices architecture and agile development methodologies.
+
+TECHNICAL SKILLS
+Programming Languages: Python, JavaScript, TypeScript, Java, SQL
+Frontend: React, Vue.js, HTML5, CSS3, Redux, Next.js
+Backend: Node.js, Flask, Django, FastAPI, Express.js
+Databases: PostgreSQL, MongoDB, MySQL, Redis
+Cloud & DevOps: AWS (EC2, S3, Lambda), Docker, Kubernetes, CI/CD, Jenkins
+Tools & Others: Git, JIRA, REST APIs, GraphQL, Microservices, Agile/Scrum
+
+PROFESSIONAL EXPERIENCE
+
+Senior Software Engineer | Tech Solutions Inc. | San Francisco, CA
+January 2021 - Present
+• Led development of microservices architecture serving 500K+ daily active users
+• Designed and implemented RESTful APIs using Python Flask and Node.js
+• Reduced application load time by 40% through code optimization and caching strategies
+• Mentored team of 4 junior developers and conducted code reviews
+• Implemented CI/CD pipelines using Jenkins and Docker, reducing deployment time by 60%
+• Collaborated with product team to define technical requirements and system architecture
+
+Software Engineer | Digital Innovations LLC | San Francisco, CA
+June 2019 - December 2020
+• Developed responsive web applications using React and Redux
+• Built backend services with Python Django and PostgreSQL database
+• Integrated third-party APIs and payment gateways (Stripe, PayPal)
+• Wrote comprehensive unit and integration tests achieving 85% code coverage
+• Participated in agile ceremonies and sprint planning
+• Optimized database queries improving response time by 30%
+
+Junior Software Developer | StartupXYZ | Mountain View, CA
+July 2017 - May 2019
+• Developed features for e-commerce platform using JavaScript and Node.js
+• Worked on frontend components using React and Material-UI
+• Assisted in database design and schema migrations
+• Fixed bugs and implemented feature requests
+• Collaborated with QA team to ensure quality deliverables
+
+EDUCATION
+
+Bachelor of Science in Computer Science
+University of California, Berkeley | Berkeley, CA
+Graduated: May 2017
+GPA: 3.7/4.0
+
+CERTIFICATIONS
+• AWS Certified Solutions Architect - Associate (2022)
+• MongoDB Certified Developer (2021)
+
+PROJECTS
+
+E-Commerce Platform (Personal Project)
+• Built full-stack e-commerce application using MERN stack
+• Implemented user authentication, shopping cart, and payment processing
+• Deployed on AWS using EC2 and S3 for static assets
+• Technologies: MongoDB, Express, React, Node.js, Stripe API
+
+Real-Time Chat Application
+• Created real-time messaging app using WebSocket and Socket.io
+• Implemented user presence, typing indicators, and message history
+• Technologies: Node.js, Socket.io, React, Redis
+
+LANGUAGES
+• English (Native)
+• Spanish (Conversational)

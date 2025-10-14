@@ -1,0 +1,79 @@
+# Machine Learning Engineer - AI Team
+
+## Company: DataVision AI
+
+### About the Role
+
+We're looking for a talented **Machine Learning Engineer** to join our AI team. You will work on cutting-edge machine learning projects, including natural language processing, computer vision, and recommendation systems.
+
+### What You'll Do
+
+- Design, develop, and deploy machine learning models at scale
+- Build and optimize ML pipelines for training and inference
+- Work with large datasets and implement data preprocessing workflows
+- Collaborate with data scientists to productionize ML models
+- Implement MLOps best practices and monitoring
+- Research and experiment with new ML techniques and algorithms
+- Optimize model performance and reduce inference latency
+- Create APIs for model serving
+
+### Required Skills & Experience
+
+- 3+ years of experience in machine learning or data science
+- Strong programming skills in **Python**
+- Hands-on experience with ML frameworks: **TensorFlow, PyTorch, or Scikit-learn**
+- Experience with deep learning architectures (CNNs, RNNs, Transformers)
+- Solid understanding of machine learning algorithms and statistics
+- Experience with model deployment and serving
+- Proficiency with data manipulation libraries (Pandas, NumPy)
+- Experience with cloud platforms (AWS, GCP, or Azure)
+- Strong understanding of software engineering principles
+- Experience with version control (Git)
+
+### Preferred Qualifications
+
+- Master's or PhD in Computer Science, Statistics, or related field
+- Experience with **NLP** or **Computer Vision**
+- Knowledge of **LLMs** (GPT, BERT, etc.) and Hugging Face Transformers
+- Experience with MLOps tools (MLflow, Kubeflow, SageMaker)
+- Familiarity with Apache Spark or distributed computing
+- Experience with A/B testing and experimentation
+- Knowledge of model optimization and quantization
+- Publications in ML conferences or journals
+- Experience with real-time inference systems
+- Proficiency with SQL and NoSQL databases
+
+### Technical Environment
+
+- Languages: Python, SQL, Scala
+- ML Frameworks: TensorFlow, PyTorch, Scikit-learn
+- Cloud: AWS (SageMaker, EMR, S3)
+- Big Data: Apache Spark, Hadoop
+- Tools: Docker, Kubernetes, Git, Jupyter
+- Databases: PostgreSQL, MongoDB, Redis
+
+### What We're Looking For
+
+- Someone passionate about AI and machine learning
+- Strong analytical and problem-solving abilities
+- Ability to work independently and in teams
+- Excellent communication skills
+- Eagerness to learn new technologies
+- Experience with agile development
+
+### Benefits
+
+- Competitive compensation and equity
+- Comprehensive health benefits
+- 401(k) with company match
+- Unlimited PTO
+- Learning and development budget
+- Latest hardware and tools
+- Flexible work arrangements
+- Gym membership
+
+**Location:** New York, NY (Remote options available)  
+**Salary:** $140,000 - $180,000  
+**Type:** Full-time
+
+Apply at: careers@datavisionai.com

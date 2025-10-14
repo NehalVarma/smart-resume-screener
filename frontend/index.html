@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Resume Screener</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .card h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        
+        .upload-section {
+            border: 2px dashed #667eea;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+        
+        .upload-section:hover {
+            border-color: #764ba2;
+            background: #f9f9ff;
+        }
+        
+        input[type="file"] {
+            display: none;
+        }
+        
+        .file-label {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #667eea;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s;
+        }
+        
+        .file-label:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+        
+        .btn {
+            padding: 12px 30px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s;
+            margin: 5px;
+        }
+        
+        .btn:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+        
+        .btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            font-family: inherit;
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .results {
+            margin-top: 30px;
+        }
+        
+        .candidate-card {
+            background: #f9f9ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        
+        .candidate-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .candidate-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .score {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .score-high {
+            background: #10b981;
+            color: white;
+        }
+        
+        .score-medium {
+            background: #f59e0b;
+            color: white;
+        }
+        
+        .score-low {
+            background: #ef4444;
+            color: white;
+        }
+        
+        .justification {
+            margin-top: 10px;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        .matches, .gaps {
+            margin-top: 15px;
+        }
+        
+        .matches h4, .gaps h4 {
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+        
+        .matches ul, .gaps ul {
+            list-style-position: inside;
+            color: #666;
+        }
+        
+        .matches li {
+            margin-bottom: 5px;
+            color: #10b981;
+        }
+        
+        .gaps li {
+            margin-bottom: 5px;
+            color: #ef4444;
+        }
+        
+        .status {
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-weight: 500;
+        }
+        
+        .status-success {
+            background: #d1fae5;
+            color: #065f46;
+        }
+        
+        .status-error {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+        
+        .status-info {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        
+        .uploaded-files {
+            margin-top: 15px;
+        }
+        
+        .file-item {
+            background: #f3f4f6;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 5px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 Smart Resume Screener</h1>
+            <p>AI-Powered Resume Analysis & Job Matching</p>
+        </header>
+        
+        <div class="card">
+            <h2>📄 Upload Resumes</h2>
+            <div class="upload-section">
+                <input type="file" id="fileInput" accept=".pdf,.txt" multiple>
+                <label for="fileInput" class="file-label">Choose Files (PDF/TXT)</label>
+                <p style="margin-top: 15px; color: #666;">Select one or more resume files</p>
+            </div>
+            <button class="btn" onclick="uploadResumes()">Upload Resumes</button>
+            <div id="uploadStatus"></div>
+            <div id="uploadedFiles" class="uploaded-files"></div>
+        </div>
+        
+        <div class="card">
+            <h2>💼 Job Description</h2>
+            <input type="text" id="jobTitle" placeholder="Job Title (e.g., Senior Software Engineer)" 
+                   style="width: 100%; padding: 12px; margin-bottom: 15px; border: 2px solid #ddd; border-radius: 5px; font-size: 1em;">
+            <textarea id="jobDescription" placeholder="Paste the job description here..."></textarea>
+            <div style="margin-top: 15px;">
+                <label style="margin-right: 10px;">Match Threshold:</label>
+                <input type="number" id="threshold" value="6" min="0" max="10" step="0.5" 
+                       style="padding: 8px; border: 2px solid #ddd; border-radius: 5px; width: 80px;">
+                <span style="color: #666; margin-left: 10px;">/ 10</span>
+            </div>
+            <button class="btn" onclick="matchCandidates()" style="margin-top: 15px;">Find Best Matches</button>
+            <div id="matchStatus"></div>
+        </div>
+        
+        <div id="loadingIndicator" class="loading">
+            <div class="spinner"></div>
+            <p style="margin-top: 15px; color: #667eea; font-weight: bold;">Processing...</p>
+        </div>
+        
+        <div id="results" class="results"></div>
+    </div>
+    
+    <script>
+        const API_URL = 'http://localhost:5000';
+        let uploadedFilesData = [];
+        
+        async function uploadResumes() {
+            const fileInput = document.getElementById('fileInput');
+            const files = fileInput.files;
+            
+            if (files.length === 0) {
+                showStatus('uploadStatus', 'Please select at least one file', 'error');
+                return;
+            }
+            
+            showLoading(true);
+            showStatus('uploadStatus', `Uploading ${files.length} file(s)...`, 'info');
+            
+            let successCount = 0;
+            let failCount = 0;
+            
+            for (let file of files) {
+                const formData = new FormData();
+                formData.append('file', file);
+                
+                try {
+                    const response = await fetch(`${API_URL}/api/upload-resume`, {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    const data = await response.json();
+                    
+                    if (data.success) {
+                        successCount++;
+                        uploadedFilesData.push(data);
+                        addFileToList(file.name, data.data.name || 'Unknown');
+                    } else {
+                        failCount++;
+                    }
+                } catch (error) {
+                    console.error('Upload error:', error);
+                    failCount++;
+                }
+            }
+            
+            showLoading(false);
+            showStatus('uploadStatus', 
+                `✅ Successfully uploaded ${successCount} resume(s). ${failCount > 0 ? `Failed: ${failCount}` : ''}`, 
+                'success');
+            
+            // Clear file input
+            fileInput.value = '';
+        }
+        
+        function addFileToList(filename, candidateName) {
+            const filesDiv = document.getElementById('uploadedFiles');
+            const fileItem = document.createElement('div');
+            fileItem.className = 'file-item';
+            fileItem.innerHTML = `
+                <span><strong>${candidateName}</strong> - ${filename}</span>
+                <span style="color: #10b981;">✓</span>
+            `;
+            filesDiv.appendChild(fileItem);
+        }
+        
+        async function matchCandidates() {
+            const jobTitle = document.getElementById('jobTitle').value.trim();
+            const jobDescription = document.getElementById('jobDescription').value.trim();
+            const threshold = parseFloat(document.getElementById('threshold').value);
+            
+            if (!jobDescription) {
+                showStatus('matchStatus', 'Please enter a job description', 'error');
+                return;
+            }
+            
+            showLoading(true);
+            showStatus('matchStatus', 'Analyzing candidates...', 'info');
+            
+            try {
+                const response = await fetch(`${API_URL}/api/match-job`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        job_title: jobTitle || 'Position',
+                        job_description: jobDescription,
+                        threshold: threshold
+                    })
+                });
+                
+                const data = await response.json();
+                
+                showLoading(false);
+                
+                if (data.success) {
+                    showStatus('matchStatus', 
+                        `✅ Found ${data.shortlisted_count} matching candidate(s) out of ${data.total_candidates}`, 
+                        'success');
+                    displayResults(data);
+                } else {
+                    showStatus('matchStatus', data.error || 'Failed to match candidates', 'error');
+                }
+            } catch (error) {
+                showLoading(false);
+                console.error('Match error:', error);
+                showStatus('matchStatus', 'Error connecting to server. Make sure the API is running.', 'error');
+            }
+        }
+        
+        function displayResults(data) {
+            const resultsDiv = document.getElementById('results');
+            
+            if (data.shortlisted_candidates.length === 0) {
+                resultsDiv.innerHTML = `
+                    <div class="card">
+                        <h2>No Matches Found</h2>
+                        <p>No candidates met the threshold score of ${data.threshold}. Try lowering the threshold.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            let html = `
+                <div class="card">
+                    <h2>🏆 Top Candidates for "${data.job_title}"</h2>
+                    <p style="color: #666; margin-bottom: 20px;">
+                        Showing ${data.shortlisted_count} candidate(s) with score ≥ ${data.threshold}
+                    </p>
+            `;
+            
+            data.shortlisted_candidates.forEach((candidate, index) => {
+                const scoreClass = candidate.score >= 8 ? 'score-high' : 
+                                  candidate.score >= 6 ? 'score-medium' : 'score-low';
+                
+                html += `
+                    <div class="candidate-card">
+                        <div class="candidate-header">
+                            <div class="candidate-name">
+                                ${index + 1}. ${candidate.name}
+                            </div>
+                            <div class="score ${scoreClass}">
+                                ${candidate.score.toFixed(1)} / 10
+                            </div>
+                        </div>
+                        <div style="color: #888; margin-bottom: 10px;">
+                            📁 ${candidate.filename}
+                        </div>
+                        <div class="justification">
+                            ${candidate.justification}
+                        </div>
+                `;
+                
+                if (candidate.key_matches && candidate.key_matches.length > 0) {
+                    html += `
+                        <div class="matches">
+                            <h4>✅ Key Matches</h4>
+                            <ul>
+                                ${candidate.key_matches.map(match => `<li>${match}</li>`).join('')}
+                            </ul>
+                        </div>
+                    `;
+                }
+                
+                if (candidate.gaps && candidate.gaps.length > 0) {
+                    html += `
+                        <div class="gaps">
+                            <h4>⚠️ Gaps</h4>
+                            <ul>
+                                ${candidate.gaps.map(gap => `<li>${gap}</li>`).join('')}
+                            </ul>
+                        </div>
+                    `;
+                }
+                
+                html += `</div>`;
+            });
+            
+            html += '</div>';
+            resultsDiv.innerHTML = html;
+        }
+        
+        function showStatus(elementId, message, type) {
+            const statusDiv = document.getElementById(elementId);
+            statusDiv.innerHTML = `<div class="status status-${type}">${message}</div>`;
+        }
+        
+        function showLoading(show) {
+            document.getElementById('loadingIndicator').style.display = show ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

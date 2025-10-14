@@ -1,0 +1,64 @@
+# Senior Full Stack Engineer
+
+## Company: Tech Innovators Inc.
+
+### About Us
+We are a fast-growing technology company building next-generation SaaS products. Our platform serves over 1 million users worldwide.
+
+### Job Description
+
+We are seeking an experienced **Senior Full Stack Engineer** to join our engineering team. You will be responsible for designing, developing, and deploying scalable web applications.
+
+### Responsibilities
+- Design and develop full-stack web applications using modern technologies
+- Build and maintain RESTful APIs and microservices
+- Collaborate with product managers and designers to implement new features
+- Write clean, maintainable, and well-tested code
+- Optimize application performance and scalability
+- Mentor junior developers and participate in code reviews
+- Participate in architectural decisions and technical planning
+- Deploy and maintain applications in cloud environments
+
+### Required Qualifications
+- 5+ years of professional software development experience
+- Strong proficiency in **Python** and **JavaScript**
+- Experience with modern frontend frameworks (React, Vue.js, or Angular)
+- Solid understanding of backend development (Node.js, Django, or Flask)
+- Experience with relational databases (PostgreSQL, MySQL)
+- Knowledge of cloud platforms (AWS, Azure, or GCP)
+- Experience with Docker and containerization
+- Strong understanding of RESTful API design
+- Experience with Git and version control
+- Excellent problem-solving and debugging skills
+
+### Nice to Have
+- Experience with TypeScript
+- Knowledge of microservices architecture
+- Experience with GraphQL
+- Familiarity with CI/CD pipelines
+- Experience with NoSQL databases (MongoDB, Redis)
+- Knowledge of Kubernetes
+- Experience with testing frameworks (Jest, Pytest)
+- Bachelor's degree in Computer Science or related field
+
+### What We Offer
+- Competitive salary and equity
+- Health, dental, and vision insurance
+- 401(k) matching
+- Flexible work hours
+- Remote work options
+- Professional development budget
+- Modern tech stack and tools
+
+### Tech Stack
+- Frontend: React, TypeScript, Redux, Next.js
+- Backend: Node.js, Python, Flask, FastAPI
+- Database: PostgreSQL, Redis
+- Cloud: AWS (EC2, S3, Lambda, RDS)
+- DevOps: Docker, Kubernetes, Jenkins
+
+**Location:** San Francisco, CA (Hybrid)  
+**Salary Range:** $150,000 - $200,000  
+**Employment Type:** Full-time
+
+To apply, please send your resume to careers@techinnovators.com

@@ -1,0 +1,101 @@
+MICHAEL RODRIGUEZ
+DevOps Engineer & Cloud Architect
+michael.rodriguez@email.com | (555) 456-7890 | Seattle, WA
+Website: mrodriguez.tech | LinkedIn: linkedin.com/in/michael-rodriguez
+
+PROFESSIONAL SUMMARY
+DevOps Engineer with 6 years of experience in cloud infrastructure, automation, and CI/CD pipelines. Expert in AWS, Kubernetes, and infrastructure as code. Passionate about building reliable, scalable, and secure systems. Strong background in both development and operations.
+
+CORE COMPETENCIES
+
+Cloud Platforms: AWS (Expert), Azure (Proficient), Google Cloud Platform
+Containers & Orchestration: Docker, Kubernetes, Helm, Docker Swarm, ECS
+CI/CD: Jenkins, GitLab CI, GitHub Actions, CircleCI, ArgoCD
+Infrastructure as Code: Terraform, CloudFormation, Ansible, Pulumi
+Monitoring & Logging: Prometheus, Grafana, ELK Stack, Datadog, CloudWatch
+Scripting: Bash, Python, PowerShell, Go
+Version Control: Git, GitHub, GitLab, Bitbucket
+Security: AWS IAM, Vault, SSL/TLS, Security Groups, RBAC
+
+PROFESSIONAL EXPERIENCE
+
+Lead DevOps Engineer | CloudTech Enterprises | Seattle, WA
+February 2021 - Present
+• Architected and implemented multi-region AWS infrastructure supporting 2M+ users
+• Reduced infrastructure costs by 35% through resource optimization and auto-scaling
+• Built comprehensive CI/CD pipelines reducing deployment time from hours to minutes
+• Managed Kubernetes clusters with 100+ microservices
+• Implemented monitoring and alerting using Prometheus and Grafana
+• Automated infrastructure provisioning using Terraform and Ansible
+• Led incident response and performed root cause analysis
+• Mentored junior engineers and established DevOps best practices
+
+DevOps Engineer | Digital Solutions Inc | Portland, OR
+June 2019 - January 2021
+• Migrated legacy applications to containerized microservices architecture
+• Implemented GitOps workflows using ArgoCD and Kubernetes
+• Created automated backup and disaster recovery procedures
+• Managed CI/CD pipelines for 20+ projects using Jenkins
+• Configured and maintained AWS services (EC2, RDS, S3, Lambda, ECS)
+• Improved deployment frequency from monthly to daily releases
+• Implemented security best practices and compliance requirements
+
+Systems Administrator | Tech Services LLC | Portland, OR
+August 2017 - May 2019
+• Managed Linux and Windows servers in hybrid cloud environment
+• Automated routine tasks using Python and Bash scripts
+• Implemented monitoring solutions and responded to alerts
+• Performed server maintenance, updates, and security patches
+• Provided technical support and troubleshooting
+• Documented processes and procedures
+
+EDUCATION
+
+Bachelor of Science in Information Technology
+University of Washington | Seattle, WA
+Graduated: May 2017
+GPA: 3.6/4.0
+
+CERTIFICATIONS
+
+• AWS Certified Solutions Architect - Professional (2023)
+• AWS Certified DevOps Engineer - Professional (2022)
+• Certified Kubernetes Administrator (CKA) (2022)
+• HashiCorp Certified: Terraform Associate (2021)
+• AWS Certified Solutions Architect - Associate (2020)
+
+TECHNICAL PROJECTS
+
+Multi-Cloud Infrastructure Platform
+• Designed and built infrastructure spanning AWS, Azure, and GCP
+• Implemented unified CI/CD pipeline for cross-cloud deployments
+• Used Terraform for infrastructure as code
+• Achieved 99.99% uptime SLA
+
+Automated Scaling System
+• Created intelligent auto-scaling solution based on custom metrics
+• Reduced infrastructure costs by 40% while maintaining performance
+• Technologies: AWS Lambda, CloudWatch, Python, Terraform
+
+Monitoring & Observability Platform
+• Built comprehensive monitoring solution for microservices
+• Implemented distributed tracing and log aggregation
+• Technologies: Prometheus, Grafana, Jaeger, ELK Stack
+
+OPEN SOURCE CONTRIBUTIONS
+• Contributor to Kubernetes and Terraform projects
+• Maintained popular DevOps tools repository (1000+ stars on GitHub)
+• Created Helm charts for common application deployments
+
+SPEAKING ENGAGEMENTS
+• Speaker at DevOps Days Seattle 2023
+• Workshop: "Infrastructure as Code with Terraform" - AWS re:Invent 2022
+
+LANGUAGES
+• English (Native)
+• Spanish (Fluent)
+
+ADDITIONAL INFORMATION
+• Active member of Cloud Native Computing Foundation
+• Regular attendee at local DevOps meetups
+• Blog about DevOps and cloud technologies at mrodriguez.tech

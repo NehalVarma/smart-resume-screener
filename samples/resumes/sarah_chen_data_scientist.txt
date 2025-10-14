@@ -1,0 +1,88 @@
+SARAH CHEN
+Data Scientist & Machine Learning Engineer
+sarah.chen@email.com | (555) 987-6543 | New York, NY
+Portfolio: sarahchen.dev | GitHub: github.com/sarahchen
+
+SUMMARY
+Results-driven Data Scientist with 4 years of experience in machine learning, deep learning, and data analysis. Expertise in building predictive models, natural language processing, and computer vision applications. Proven track record of delivering data-driven solutions that impact business outcomes.
+
+SKILLS
+Machine Learning: Scikit-learn, TensorFlow, PyTorch, Keras, XGBoost, Random Forests
+Programming: Python, R, SQL, Scala
+Data Analysis: Pandas, NumPy, Matplotlib, Seaborn, Plotly
+NLP: NLTK, spaCy, Hugging Face Transformers, GPT, BERT
+Big Data: Apache Spark, Hadoop, Hive
+Cloud: AWS (SageMaker, EMR), Google Cloud Platform, Azure ML
+Databases: PostgreSQL, MySQL, MongoDB, Cassandra
+Tools: Jupyter, Git, Docker, MLflow, Airflow
+
+EXPERIENCE
+
+Senior Data Scientist | AI Innovations Corp | New York, NY
+March 2022 - Present
+• Developed and deployed machine learning models improving customer churn prediction by 25%
+• Built NLP pipeline for sentiment analysis processing 1M+ customer reviews daily
+• Implemented recommendation system using collaborative filtering and deep learning
+• Led team of 3 data scientists on computer vision project for quality control
+• Created data pipelines using Apache Airflow and AWS services
+• Presented insights and model performance to C-level executives
+
+Data Scientist | DataTech Solutions | New York, NY
+January 2020 - February 2022
+• Built predictive models for customer lifetime value using gradient boosting algorithms
+• Developed time series forecasting models for inventory optimization
+• Created dashboards and visualizations using Tableau and Plotly
+• Performed A/B testing and statistical analysis to measure feature impact
+• Collaborated with engineering team to deploy models to production
+• Achieved 92% accuracy in fraud detection model using ensemble methods
+
+Machine Learning Engineer | Analytics Plus | Boston, MA
+July 2019 - December 2019
+• Implemented image classification models using CNNs with 95% accuracy
+• Developed data preprocessing and feature engineering pipelines
+• Optimized model training time by 50% through distributed computing
+• Created API endpoints for model serving using Flask and FastAPI
+
+EDUCATION
+
+Master of Science in Data Science
+Columbia University | New York, NY
+Graduated: May 2019
+GPA: 3.9/4.0
+Thesis: "Deep Learning Approaches for Financial Market Prediction"
+
+Bachelor of Science in Statistics
+University of Michigan | Ann Arbor, MI
+Graduated: May 2017
+GPA: 3.8/4.0
+
+CERTIFICATIONS
+• AWS Certified Machine Learning - Specialty (2023)
+• Google Cloud Professional Machine Learning Engineer (2022)
+• TensorFlow Developer Certificate (2021)
+
+PUBLICATIONS
+• Chen, S. et al. (2022). "Novel Approaches to NLP in Healthcare", Journal of AI Research
+• Co-authored paper on deep learning for medical imaging analysis
+
+PROJECTS
+
+Healthcare Diagnosis System
+• Built deep learning model for disease prediction from medical images
+• Achieved 94% accuracy using ResNet architecture
+• Technologies: PyTorch, OpenCV, Flask, Docker
+
+Stock Market Sentiment Analyzer
+• Created NLP system analyzing financial news and social media
+• Used BERT and GPT models for sentiment extraction
+• Technologies: Hugging Face Transformers, Python, AWS
+
+AWARDS & ACHIEVEMENTS
+• Winner - Healthcare AI Hackathon 2022
+• Published 3 research papers in peer-reviewed journals
+• Speaker at PyData Conference 2023
+
+LANGUAGES
+• English (Native)
+• Mandarin Chinese (Native)
+• French (Basic)
