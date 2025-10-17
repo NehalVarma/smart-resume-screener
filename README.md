@@ -1,5 +1,11 @@
 # 🎯 Smart Resume Screener
 
+
+
+https://github.com/user-attachments/assets/0217120e-b2e4-47c4-9cbd-787342493fce
+
+
+
 An intelligent resume screening application that uses Large Language Models (LLMs) to parse resumes, extract structured information, and match candidates with job descriptions.
 
 ## 📋 Table of Contents
@@ -13,7 +19,6 @@ An intelligent resume screening application that uses Large Language Models (LLM
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
 - [LLM Prompts](#llm-prompts)
-- [Demo](#demo)
 - [Project Structure](#project-structure)
 
 ## 🎥 Overview
@@ -379,33 +384,6 @@ SCORING CRITERIA (1-10):
 - 🚀 Complete full-stack application workflow
 
 ---
-
-### Video Demo Recording Guide
-
-1. **Setup** (30 seconds):
-   - Show the application structure
-   - Start the backend server
-   - Open the frontend
-
-2. **Upload Resumes** (45 seconds):
-   - Upload 2-3 sample resumes
-   - Show successful upload confirmations
-   - Highlight extracted candidate information
-
-3. **Job Matching** (45 seconds):
-   - Enter a job title and description
-   - Click "Find Best Matches"
-   - Show the results with scores and justifications
-
-4. **Results Analysis** (30 seconds):
-   - Highlight key matches and gaps
-   - Show how scores are calculated
-   - Demonstrate filtering by threshold
-
-### Sample Job Descriptions
-
-See `samples/job_descriptions/` for example job postings to use in demos.
-
 ## 📁 Project Structure
 
 ```
