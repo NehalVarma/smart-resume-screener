@@ -12,10 +12,11 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            background: #f5f7fa;
             min-height: 100vh;
             padding: 20px;
+            color: #2d3748;
         }
         
         .container {
@@ -25,46 +26,52 @@
         
         header {
             text-align: center;
-            color: white;
+            color: #1a202c;
             margin-bottom: 40px;
+            padding: 30px 0;
         }
         
         header h1 {
-            font-size: 2.5em;
+            font-size: 2.2em;
             margin-bottom: 10px;
+            font-weight: 700;
+            color: #2d3748;
         }
         
         header p {
-            font-size: 1.2em;
-            opacity: 0.9;
+            font-size: 1em;
+            color: #718096;
         }
         
         .card {
             background: white;
-            border-radius: 10px;
+            border-radius: 8px;
             padding: 30px;
             margin-bottom: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
         }
         
         .card h2 {
-            color: #667eea;
+            color: #2d3748;
             margin-bottom: 20px;
-            font-size: 1.8em;
+            font-size: 1.5em;
+            font-weight: 600;
         }
         
         .upload-section {
-            border: 2px dashed #667eea;
-            border-radius: 8px;
+            border: 2px dashed #cbd5e0;
+            border-radius: 6px;
             padding: 30px;
             text-align: center;
             margin-bottom: 20px;
             transition: all 0.3s;
+            background: #f7fafc;
         }
         
         .upload-section:hover {
-            border-color: #764ba2;
-            background: #f9f9ff;
+            border-color: #4a5568;
+            background: #edf2f7;
         }
         
         input[type="file"] {
@@ -73,35 +80,35 @@
         
         .file-label {
             display: inline-block;
-            padding: 12px 30px;
-            background: #667eea;
+            padding: 10px 24px;
+            background: #3182ce;
             color: white;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
-            font-size: 1em;
-            transition: all 0.3s;
+            font-size: 0.95em;
+            transition: all 0.2s;
+            font-weight: 500;
         }
         
         .file-label:hover {
-            background: #764ba2;
-            transform: translateY(-2px);
+            background: #2c5aa0;
         }
         
         .btn {
-            padding: 12px 30px;
-            background: #667eea;
+            padding: 10px 24px;
+            background: #3182ce;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
-            font-size: 1em;
-            transition: all 0.3s;
+            font-size: 0.95em;
+            transition: all 0.2s;
             margin: 5px;
+            font-weight: 500;
         }
         
         .btn:hover {
-            background: #764ba2;
-            transform: translateY(-2px);
+            background: #2c5aa0;
         }
         
         .btn:disabled {
@@ -112,18 +119,20 @@
         
         textarea {
             width: 100%;
-            padding: 15px;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            font-size: 1em;
+            padding: 12px;
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            font-size: 0.95em;
             font-family: inherit;
             resize: vertical;
             min-height: 150px;
+            transition: border-color 0.2s;
         }
         
         textarea:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #3182ce;
+            box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
         }
         
         .results {
@@ -131,11 +140,13 @@
         }
         
         .candidate-card {
-            background: #f9f9ff;
-            border-left: 4px solid #667eea;
-            padding: 20px;
-            margin-bottom: 15px;
-            border-radius: 5px;
+            background: #ffffff;
+            border-left: 3px solid #3182ce;
+            padding: 24px;
+            margin-bottom: 16px;
+            border-radius: 4px;
+            border: 1px solid #e2e8f0;
+            border-left-width: 3px;
         }
         
         .candidate-header {
@@ -153,25 +164,28 @@
         
         .score {
             display: inline-block;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 1.1em;
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1em;
         }
         
         .score-high {
-            background: #10b981;
-            color: white;
+            background: #c6f6d5;
+            color: #22543d;
+            border: 1px solid #9ae6b4;
         }
         
         .score-medium {
-            background: #f59e0b;
-            color: white;
+            background: #feebc8;
+            color: #7c2d12;
+            border: 1px solid #fbd38d;
         }
         
         .score-low {
-            background: #ef4444;
-            color: white;
+            background: #fed7d7;
+            color: #742a2a;
+            border: 1px solid #fc8181;
         }
         
         .justification {
@@ -185,45 +199,53 @@
         }
         
         .matches h4, .gaps h4 {
-            color: #667eea;
+            color: #2d3748;
             margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 0.95em;
         }
         
         .matches ul, .gaps ul {
             list-style-position: inside;
-            color: #666;
+            color: #4a5568;
+            font-size: 0.9em;
         }
         
         .matches li {
             margin-bottom: 5px;
-            color: #10b981;
+            color: #2f855a;
         }
         
         .gaps li {
             margin-bottom: 5px;
-            color: #ef4444;
+            color: #c53030;
         }
         
         .status {
-            padding: 10px 20px;
-            border-radius: 5px;
-            margin: 10px 0;
-            font-weight: 500;
+            padding: 12px 16px;
+            border-radius: 4px;
+            margin: 12px 0;
+            font-weight: 400;
+            font-size: 0.9em;
+            border-left: 3px solid;
         }
         
         .status-success {
-            background: #d1fae5;
-            color: #065f46;
+            background: #f0fdf4;
+            color: #166534;
+            border-left-color: #22c55e;
         }
         
         .status-error {
-            background: #fee2e2;
+            background: #fef2f2;
             color: #991b1b;
+            border-left-color: #ef4444;
         }
         
         .status-info {
-            background: #dbeafe;
+            background: #eff6ff;
             color: #1e40af;
+            border-left-color: #3b82f6;
         }
         
         .uploaded-files {
@@ -247,12 +269,12 @@
         }
         
         .spinner {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #667eea;
+            border: 3px solid #e2e8f0;
+            border-top: 3px solid #3182ce;
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
+            width: 36px;
+            height: 36px;
+            animation: spin 0.8s linear infinite;
             margin: 0 auto;
         }
         
@@ -265,12 +287,17 @@
 <body>
     <div class="container">
         <header>
-            <h1>🎯 Smart Resume Screener</h1>
-            <p>AI-Powered Resume Analysis & Job Matching</p>
+            <h1>Smart Resume Screener</h1>
+            <p>Intelligent Resume Analysis & Candidate Matching System</p>
         </header>
         
         <div class="card">
-            <h2>📄 Upload Resumes</h2>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h2 style="margin: 0;">📄 Upload Resumes</h2>
+                <button class="btn" onclick="clearDatabase()" style="background: #dc3545; padding: 8px 16px; font-size: 0.9em;">
+                    🗑️ Clear Database
+                </button>
+            </div>
             <div class="upload-section">
                 <input type="file" id="fileInput" accept=".pdf,.txt" multiple>
                 <label for="fileInput" class="file-label">Choose Files (PDF/TXT)</label>
@@ -307,6 +334,38 @@
     <script>
         const API_URL = 'http://localhost:5000';
         let uploadedFilesData = [];
+        
+        async function clearDatabase() {
+            if (!confirm('⚠️ This will delete ALL resumes and job matching history. Are you sure?')) {
+                return;
+            }
+            
+            try {
+                showLoading(true);
+                const response = await fetch(`${API_URL}/api/clear-database`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    showStatus('uploadStatus', '✅ Database cleared successfully!', 'success');
+                    uploadedFilesData = [];
+                    document.getElementById('uploadedFiles').innerHTML = '';
+                    document.getElementById('results').innerHTML = '';
+                    document.getElementById('fileInput').value = '';
+                } else {
+                    showStatus('uploadStatus', `Error: ${data.error}`, 'error');
+                }
+            } catch (error) {
+                showStatus('uploadStatus', `Error clearing database: ${error.message}`, 'error');
+            } finally {
+                showLoading(false);
+            }
+        }
         
         async function uploadResumes() {
             const fileInput = document.getElementById('fileInput');

@@ -10,8 +10,9 @@ import os
 from pathlib import Path
 
 from services.resume_parser import ResumeParser
-from services.data_extractor import DataExtractor
-from services.job_matcher import JobMatcher
+# Using mock services for demo (no OpenAI API calls)
+from services.data_extractor_mock import DataExtractor
+from services.job_matcher_mock import JobMatcher
 from database.db_manager import DatabaseManager
 
 app = Flask(__name__)
@@ -193,6 +194,19 @@ def get_job_history():
             'success': True,
             'count': len(history),
             'jobs': history
+        }), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+@app.route('/api/clear-database', methods=['POST'])
+def clear_database():
+    """Clear all data from database"""
+    try:
+        db_manager.clear_all_data()
+        return jsonify({
+            'success': True,
+            'message': 'Database cleared successfully'
         }), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500

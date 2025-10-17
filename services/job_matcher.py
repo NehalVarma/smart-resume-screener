@@ -3,7 +3,7 @@ Job Matcher Service
 Uses LLM to match candidates with job descriptions and provide scoring
 """
 import json
-import openai
+from openai import OpenAI
 from config import Config
 
 
@@ -13,7 +13,7 @@ class JobMatcher:
     def __init__(self):
         """Initialize with OpenAI configuration"""
         Config.validate()
-        openai.api_key = Config.OPENAI_API_KEY
+        self.client = OpenAI(api_key=Config.OPENAI_API_KEY)
         self.model = Config.OPENAI_MODEL
     
     def match_candidate(self, candidate_data, resume_text, job_description, job_title):
@@ -37,7 +37,7 @@ class JobMatcher:
         )
         
         try:
-            response = openai.chat.completions.create(
+            response = self.client.chat.completions.create(
                 model=self.model,
                 messages=[
                     {

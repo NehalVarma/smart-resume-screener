@@ -3,7 +3,7 @@ Data Extractor Service
 Uses LLM to extract structured data from resume text
 """
 import json
-import openai
+from openai import OpenAI
 from config import Config
 
 
@@ -13,7 +13,7 @@ class DataExtractor:
     def __init__(self):
         """Initialize with OpenAI configuration"""
         Config.validate()
-        openai.api_key = Config.OPENAI_API_KEY
+        self.client = OpenAI(api_key=Config.OPENAI_API_KEY)
         self.model = Config.OPENAI_MODEL
     
     def extract_candidate_info(self, resume_text):
@@ -29,7 +29,7 @@ class DataExtractor:
         prompt = self._build_extraction_prompt(resume_text)
         
         try:
-            response = openai.chat.completions.create(
+            response = self.client.chat.completions.create(
                 model=self.model,
                 messages=[
                     {

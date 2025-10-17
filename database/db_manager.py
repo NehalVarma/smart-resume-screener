@@ -289,3 +289,19 @@ class DatabaseManager:
             })
         
         return matches
+    
+    def clear_all_data(self):
+        """
+        Clear all data from all tables
+        """
+        conn = self.get_connection()
+        cursor = conn.cursor()
+        
+        cursor.execute("DELETE FROM match_results")
+        cursor.execute("DELETE FROM job_postings")
+        cursor.execute("DELETE FROM candidates")
+        
+        conn.commit()
+        conn.close()
+        
+        print("✅ All data cleared from database")
