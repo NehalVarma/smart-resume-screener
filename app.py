@@ -18,13 +18,14 @@ from database.db_manager import DatabaseManager
 app = Flask(__name__, static_folder='frontend')
 CORS(app)
 
+
 # Configuration
-UPLOAD_FOLDER = 'uploads/resumes'
+UPLOAD_FOLDER = os.path.join(app.root_path, 'uploads', 'resumes')
 ALLOWED_EXTENSIONS = {'pdf', 'txt'}
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max file size
 
-# Ensure upload directory exists
+# Ensure upload directory exists (absolute path)
 Path(UPLOAD_FOLDER).mkdir(parents=True, exist_ok=True)
 
 # Initialize services
