@@ -61,42 +61,37 @@ def upload_resume():
     Upload and parse a resume
     Returns: Structured candidate data with extracted information
     """
+    import traceback
     try:
         # Check if file is in request
         if 'file' not in request.files:
             return jsonify({'error': 'No file provided'}), 400
-        
         file = request.files['file']
-        
         if file.filename == '':
             return jsonify({'error': 'No file selected'}), 400
-        
         if not allowed_file(file.filename):
             return jsonify({'error': 'Invalid file type. Only PDF and TXT allowed'}), 400
-        
         # Save file
         filename = secure_filename(file.filename)
         filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
         file.save(filepath)
-        
         # Parse resume
         resume_text = resume_parser.parse(filepath)
-        
         # Extract structured data using LLM
         candidate_data = data_extractor.extract_candidate_info(resume_text)
-        
         # Save to database
         candidate_id = db_manager.save_candidate(filename, resume_text, candidate_data)
-        
         return jsonify({
             'success': True,
             'candidate_id': candidate_id,
             'filename': filename,
             'data': candidate_data
         }), 200
-        
     except Exception as e:
-        return jsonify({'error': str(e)}), 500
+        # Log the full traceback to the console (Render logs)
+        print('UPLOAD ERROR:', str(e))
+        traceback.print_exc()
+        return jsonify({'error': str(e), 'trace': traceback.format_exc()}), 500
 
 
 @app.route('/api/match-job', methods=['POST'])
