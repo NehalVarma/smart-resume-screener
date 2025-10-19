@@ -3,7 +3,7 @@ Smart Resume Screener - Main Application
 Flask API for resume parsing, skill extraction, and job matching
 """
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
 import os
@@ -15,7 +15,7 @@ from services.data_extractor_mock import DataExtractor
 from services.job_matcher_mock import JobMatcher
 from database.db_manager import DatabaseManager
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='frontend')
 CORS(app)
 
 # Configuration
@@ -37,6 +37,12 @@ job_matcher = JobMatcher()
 def allowed_file(filename):
     """Check if file extension is allowed"""
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+
+@app.route('/')
+def index():
+    """Serve the frontend HTML"""
+    return send_from_directory('frontend', 'index.html')
 
 
 @app.route('/health', methods=['GET'])
@@ -212,12 +218,17 @@ def clear_database():
         return jsonify({'error': str(e)}), 500
 
 
+# Initialize database on startup
+db_manager.init_db()
+
 if __name__ == '__main__':
-    # Initialize database
-    db_manager.init_db()
-    
     # Run the application
     print("🚀 Starting Smart Resume Screener API...")
     print("📍 API available at: http://localhost:5000")
     print("✅ Health check: http://localhost:5000/health")
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    
+    # Get port from environment variable (for deployment platforms)
+    import os
+    port = int(os.environ.get('PORT', 5000))
+    
+    app.run(debug=False, host='0.0.0.0', port=port)
