@@ -16,7 +16,8 @@ from services.job_matcher_mock import JobMatcher
 from database.db_manager import DatabaseManager
 
 app = Flask(__name__, static_folder='frontend')
-CORS(app)
+# Allow CORS for all domains on all routes, including credentials
+CORS(app, resources={r"/api/*": {"origins": "*"}}, supports_credentials=True)
 
 
 # Configuration
